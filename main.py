@@ -7,7 +7,7 @@
 # ------------------------------------------------------------
 
 import streamlit as st
-from groq import Groq
+import groq
 import sympy as sp
 import re
 import os
@@ -32,14 +32,14 @@ def configurar_pagina():
     return modelo
 
 def crear_cliente():
-    api_key = st.secrets.get("CLAVE_API") or os.getenv("CLAVE_API")
+    api_key = st.secrets["CLAVE_API"]
 
     if not api_key:
         st.error("❌ Falta CLAVE_API en secrets.")
         st.stop()
 
     try:
-        cliente = Groq(api_key=api_key)
+        cliente = groq.Groq(api_key=api_key)
         st.sidebar.success("🔗 Conectado a Groq")
         return cliente
     except Exception as e:
@@ -269,6 +269,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
