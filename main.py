@@ -43,7 +43,7 @@ def crear_cliente():
         st.stop()
 
     try:
-        cliente = groq.Client(api_key=api_key)
+        cliente = groq.Groq(api_key=api_key)
         st.sidebar.success("🔗 Conectado a Groq")
         return cliente
     except Exception as e:
@@ -273,3 +273,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
