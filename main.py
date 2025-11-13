@@ -1,5 +1,5 @@
 # ------------------------------------------------------------
-# 🧠 CALCULADORA CIENTÍFICA INTELIGENTE – VERSIÓN FINAL PRO
+# 🧠 CALCULADORA CIENTÍFICA INTELIGENTE
 # ------------------------------------------------------------
 # Streamlit + Groq + SymPy + Clasificación Automática Total
 # Resuelve matemáticas, física, química, estadísticas,
@@ -269,5 +269,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
